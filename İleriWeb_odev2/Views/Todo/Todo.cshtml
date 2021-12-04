@@ -1,0 +1,49 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TodoView</title>
+    <link href="~/Content/Todo.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://practicals.albertjose.com/javascript/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Todo List <i class="fa fa-plus"></i></h1>
+        <input type="text" name="yeniToDo" placeholder="Yeni bir gorev ekleyin.">
+        <ul>
+
+        </ul>
+    
+        <script>
+            $('ul').append("<li><span><i class='fa fa-trash'></i></span>" + "@ViewBag.ilkGorev" + "</li>");
+            $('ul').append("<li><span><i class='fa fa-trash'></i></span>" + "@ViewBag.ikinciGorev" + "</li>");
+            $('ul').append("<li><span><i class='fa fa-trash'></i></span>" + "@ViewBag.ucuncuGorev" + "</li>");
+            $('ul').append("<li><span><i class='fa fa-trash'></i></span>" + "@ViewBag.dorduncuGorev" + "</li>");
+        </script>
+    </div>
+
+    <div id="bilgi">
+         <h2>Kullanım hakkında:</h2>
+         <br />
+         <p>Görev yazdıktan sonra "Enter" tuşunu kullanarak ekleme yapabilirsiniz.</p>
+         <br />
+         <p>Artı butonu ile ""Görev ekle" kısmını gizleyebilrisiniz.</p>
+         <br />
+         <p>Bir görevin üstüne tıklarsanız çizilir.</p>
+         <br />
+         <p>Bir görevi silmek için soldaki "çöp" ikonunu kullanırsınız.</p>
+    </div>
+
+        <script src="~/Scripts/Todo.js"></script>
+
+</body>
+</html>
